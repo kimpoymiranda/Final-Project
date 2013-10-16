@@ -118,16 +118,16 @@
                         <input id='title-input' type="text" class="form-control" name='Title' placeholder="Enter title.." value='{{Title}}'>
                     </div>
                     <div class="form-group">
-                        <label for="subtite-input">Subtitle</label>
-                        <input id='subtitle-input' type="text" class="form-control" name='Subtitle' placeholder="Enter subtitle.." value='{{Subtitle}}'>
+                        <label for="subtite-input">Author(s)</label>
+                        <input id='Author-input' type="text" class="form-control" name='Author' placeholder="Enter Author.." value='{{Author}}'>
                     </div>
                     <div class="form-group">
                         <label for="description-input">Description</label>
                         <textarea id='description-input' name='Description' class="form-control" rows="3">{{Description}}</textarea>
                     </div>
                     {{#if Id}}
-                        <input id='subtitle-input' type="text" style='display:none;' name='Id' value='{{Id}}'>
-                        <button class="btn-cancel btn btn-default">Cancel</button>
+                        <input id='Author-input' type="text" style='display:none;' name='Id' value='{{Id}}'>
+                        <button class="btn-cancel btn btn-primary">Cancel</button>
                     {{/if}}
                     <button type="submit" class="btn btn-primary">Save</button>
                 </form>
@@ -137,11 +137,16 @@
 
         <script id="tpl-thesis-detail" type="text/x-handlebars-template">
             <div class="col-lg-8">
-                <h1>{{Year}} : {{Title}}</h1>
-                <p class="lead">{{Subtitle }}</p>
-                <div class="fb-like" data-href="https://final-remik.appspot.com/thesis-{{Id}}" data-colorscheme="light" data-layout="standard" data-action="like" data-show-faces="true" data-send="false"></div>
-                <hr>
+                <h1>Year: {{Year}} <br>
+                Thesis Title: {{Title}}
+                <br>
+                Author: {{Author}}
+                <br>
+                </h1>
+                <p class="lead">{{Author}}</p>
                 <p>{{Description }}</p>
+                <hr>
+                <div class="fb-like" data-href="https://final-remik.appspot.com/thesis-{{Id}}" data-colorscheme="light" data-layout="standard" data-action="like" data-show-faces="true" data-send="false"></div>
                 <hr>
                 <div class="fb-comments" data-href="https://final-remik.appspot.com/thesis-{{Id}}"  data-width="The pixel width of the plugin"></div>
             </div>

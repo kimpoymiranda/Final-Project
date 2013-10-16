@@ -90,7 +90,7 @@ $(function() {
             $.get('/api/search/?q=' + query, {
                 returned_fields: JSON.stringify(['Title', 'Year'])
             }, function(list) {
-                callback(list);
+                callback(item);
             });
         },
         getThesisByID: function(id, callback) {
